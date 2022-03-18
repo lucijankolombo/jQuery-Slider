@@ -1,0 +1,110 @@
+html, body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #0071bc;
+    height: 42px;
+    width: 100%;
+    color: #fff;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    margin-top: 11px;
+    float: left;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 16px;
+}
+
+li a:hover {
+    background-color: #1357a6;
+}
+ 
+.slider {
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    align-items: stretch;
+    justify-items: center;
+    padding: 10px;
+    width: 60%;
+}
+
+.slider img {
+    position: relative;
+    height: 160px;
+    border-radius: 6px;
+}
+
+.side-text {
+    width: 25%;
+    float: right;
+    padding: 20px;
+    margin-right: 10px;
+ }
+
+ .side-text h2 {
+    color: #0071bc;
+}
+
+.side-text p {
+    color: #757575;
+    line-height: 1.4;
+}
+
+.btn-left, .btn-right {
+    padding: 20px;
+    font-size: 27px;
+    cursor: pointer; 
+}
+
+i {
+    color: #0071bc;
+    transition: 1s;
+}
+
+i:hover {
+   transform: scale(1.08);
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .side-text {
+       display: none;
+    }
+}
+ 
+@media only screen and (min-width: 1600px) and (max-width: 1760px) {
+    .slider {
+       width: 55%;
+    }
+    .side-text {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1760px) and (max-width: 2000px) {
+    .slider {
+       width: 50%;
+    }
+    .side-text {
+         margin-right: 10%;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slider App</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/909c8c0c95.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<script>
+  
+  $(document).ready(function(){
+
+  $(".btn-right").click(function(){
+       $("img:last-child").fadeOut(400, function() {
+           $("img:last-child").fadeIn(1, function() {
+               $("img:last-child").insertBefore("img:first-child");
+           });
+       });
+
+  });
+
+  $(".btn-left").click(function(){
+       $("img:first-child").fadeOut(400, function() {
+           $("img:first-child").fadeIn(1, function() {
+               $("img:first-child").insertAfter("img:last-child");
+           });
+       });
+
+  });
+
+});
+
+</script>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    
+    <main class="slider">
+      <img src="Images\slider-image-1.jpg">
+      <img src="Images\slider-image-2.jpg" style="width: 144px">
+      <img src="Images\slider-image-3.jpg">
+      <img src="Images\slider-image-4.jpg">
+      <img src="Images\slider-image-5.jpg" style="width: 240px">
+      <img src="Images\slider-image-6.jpg" style="width: 208px">
+      <img src="Images\slider-image-7.jpg">
+      <img src="Images\slider-image-8.jpg">
+      <img src="Images\slider-image-9.jpg">
+      <img src="Images\slider-image-10.jpg">
+    </main>
+
+    <div class="side-text">
+      <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2> 
+      <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+        commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit 
+        voluptatem accusantium doloremque laudantium.</p>
+        <span class="btn-left"><i class="fa-solid fa-circle-arrow-left"></i></span>
+        <span class="btn-right"><i class="fa-solid fa-circle-arrow-right"></i></span>
+    </div>
+    
+</body>
+</html>
